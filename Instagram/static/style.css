@@ -1,0 +1,419 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(245, 245, 245);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Container */
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    padding-top: 32px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 935px;
+    padding: 0 20px;
+    width: 100%;
+    align-items: center;
+}
+
+/* Phone Section */
+.phone-section {
+    flex-basis: 454px;
+    margin-right: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-container {
+    margin-bottom: 12px;
+    margin-left: -35px;
+}
+
+.phones-img {
+    height: 618px;
+}
+
+/* Form Section */
+.form-section {
+    flex-basis: 350px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.form-container {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Logo */
+.logo-container {
+    margin: 36px 40px 12px;
+    text-align: center;
+}
+
+/* Form Wrapper */
+.form-wrapper {
+    margin-bottom: 10px;
+    padding: 0 40px;
+}
+
+.form-wrapper form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 24px;
+}
+
+/* Input Styles */
+.input-wrapper {
+    margin: 0 0 6px;
+    position: relative;
+}
+
+.input-label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-span {
+    color: rgb(168, 168, 168);
+    font-size: 12px;
+    height: 36px;
+    left: 8px;
+    top: 0;
+    line-height: 36px;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    text-overflow: ellipsis;
+    transform-origin: left top;
+    transition: transform 0.1s ease-out, font-size 0.1s ease-out;
+    user-select: none;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.input-box {
+    background: rgb(18, 18, 18);
+    border: 1px solid rgb(54, 54, 54);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: rgb(245, 245, 245);
+    font-size: 12px;
+    height: 36px;
+    padding: 9px 0 7px 8px;
+    outline: none;
+    width: 100%;
+}
+
+.input-box::placeholder {
+    color: rgb(115, 115, 115);
+}
+
+.input-box:focus {
+    border-color: rgb(115, 115, 115);
+}
+
+.input-box:focus::placeholder {
+    color: transparent;
+}
+
+/* Login Button */
+.login-button {
+    background-color: rgb(0, 149, 246);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 7px 16px;
+    margin-top: 8px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    user-select: none;
+    width: 100%;
+    line-height: 18px;
+}
+
+.login-button:hover {
+    background-color: rgb(24, 119, 242);
+}
+
+.login-button:active {
+    opacity: 0.7;
+}
+
+/* OR Divider */
+.or-divider {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 40px 18px;
+    align-items: center;
+}
+
+.divider-line {
+    background-color: rgb(54, 54, 54);
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 1px;
+}
+
+.divider-text {
+    color: rgb(168, 168, 168);
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15px;
+    margin: 0 18px;
+    text-transform: uppercase;
+}
+
+/* Facebook Login */
+.fb-login-wrapper {
+    margin: 8px 40px;
+}
+
+.fb-login-btn {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+}
+
+.fb-icon-span {
+    display: flex;
+    margin-right: 8px;
+}
+
+.fb-icon-span svg {
+    fill: rgb(224, 241, 255);
+}
+
+.fb-text {
+    color: rgb(224, 241, 255);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.fb-login-btn:hover .fb-text {
+    color: rgb(255, 255, 255);
+}
+
+/* Forgot Password */
+.forgot-link {
+    color: rgb(224, 241, 255);
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.forgot-link:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* Signup Container */
+.signup-container {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+}
+
+.signup-text {
+    color: rgb(245, 245, 245);
+    font-size: 14px;
+    line-height: 18px;
+    margin: 15px;
+    text-align: center;
+}
+
+.signup-link {
+    color: rgb(0, 149, 246);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    color: rgb(224, 241, 255);
+}
+
+/* App Download */
+.app-download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.app-text {
+    color: rgb(245, 245, 245);
+    font-size: 14px;
+    line-height: 18px;
+    margin: 10px 20px;
+    text-align: center;
+}
+
+.store-buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+}
+
+.store-buttons a {
+    margin: 0 4px;
+}
+
+.store-img {
+    height: 40px;
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(0, 0, 0);
+    flex-shrink: 0;
+    padding: 0 20px;
+}
+
+.footer-container {
+    margin: 0 auto;
+    max-width: 935px;
+    padding: 38px 0 45px;
+}
+
+.footer-nav {
+    margin-bottom: 16px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 0 8px 12px;
+}
+
+.footer-links a {
+    color: rgb(168, 168, 168);
+    font-size: 12px;
+    line-height: 14px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-selector {
+    margin-bottom: 16px;
+    margin-right: 16px;
+}
+
+.language-select {
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(54, 54, 54);
+    border-radius: 3px;
+    color: rgb(168, 168, 168);
+    cursor: pointer;
+    font-size: 12px;
+    height: 26px;
+    outline: none;
+    padding: 0 26px 0 8px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a8a8a8' d='M6 9L1.5 4.5 2.25 3.75 6 7.5 9.75 3.75 10.5 4.5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+}
+
+.copyright {
+    color: rgb(168, 168, 168);
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 875px) {
+    .phone-section {
+        display: none;
+    }
+    
+    .content-wrapper {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        background-color: rgb(0, 0, 0);
+    }
+    
+    .main-container {
+        padding-top: 0;
+    }
+    
+    .form-container {
+        background-color: transparent;
+        border: none;
+    }
+    
+    .signup-container {
+        background-color: transparent;
+        border: none;
+    }
+}

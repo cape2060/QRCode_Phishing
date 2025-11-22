@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    gap: 80px;
+}
+
+/* Left Section */
+.left-section {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+    margin-bottom: -20px;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='106' viewBox='0 0 300 106'%3E%3Ctext x='0' y='80' font-family='Klavika, Arial, sans-serif' font-size='72' font-weight='bold' fill='%231877f2'%3Efacebook%3C/text%3E%3C/svg%3E");
+}
+
+.tagline {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+    color: #1c1e21;
+}
+
+/* Right Section - Login Box */
+.right-section {
+    flex: 1;
+    max-width: 396px;
+}
+
+.login-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 28px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 17px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    outline: none;
+}
+
+.input-field:focus {
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px #e7f3ff;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 16px;
+    transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #166fe5;
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #dadde1;
+    margin: 20px 0;
+}
+
+.create-account-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 14px 16px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #42b72a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.create-account-btn:hover {
+    background-color: #36a420;
+}
+
+.create-page {
+    text-align: center;
+    font-size: 14px;
+    color: #1c1e21;
+}
+
+.create-page a {
+    color: #1c1e21;
+    text-decoration: none;
+}
+
+.create-page a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.languages a {
+    color: #8a8d91;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.languages a:hover {
+    text-decoration: underline;
+}
+
+.plus-btn {
+    background-color: #f5f6f7;
+    border: 1px solid #ccd0d5;
+    padding: 0 8px;
+    font-weight: bold;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid #dadde1;
+    margin: 10px 0;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.links a {
+    color: #8a8d91;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    color: #8a8d91;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .left-section {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .tagline {
+        font-size: 24px;
+    }
+
+    .right-section {
+        width: 100%;
+        max-width: 396px;
+    }
+}
